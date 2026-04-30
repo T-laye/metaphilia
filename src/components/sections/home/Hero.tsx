@@ -24,6 +24,7 @@ export default function Hero() {
 				transition={{
 					duration: 5,
 					repeat: Infinity,
+					repeatType: "loop",
 					ease: "easeInOut",
 				}}
 				className="absolute -bottom-3 -right-8 sm:right-0 max-sm:h-32 max-md:h-52"
