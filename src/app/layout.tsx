@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 // import { Figtree } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "../components/Header";
+import Providers from "../components/providers";
 
 const figtree = localFont({
 	src: [
@@ -57,7 +59,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={`${figtree.variable} h-full antialiased`}>
-			<body className="min-h-full flex flex-col">{children}</body>
+			<body className="min-h-full flex flex-col">
+				<Header />
+				<Providers>{children}</Providers>
+			</body>
 		</html>
 	);
 }

@@ -50,33 +50,76 @@
 }
 
 @theme inline {
+	/* Base */
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
-	--font-sans: var(--font-figtree);
-	/* --font-mono: var(--font-geist-mono); */
-}
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+	/* Font */
+	--font-sans: var(--font-figtree);
+
+	/* Primary scale */
+	--color-primary-100: var(--primary-100);
+	--color-primary-200: var(--primary-200);
+	--color-primary-300: var(--primary-300);
+	--color-primary-400: var(--primary-400);
+	--color-primary-500: var(--primary-500);
+	--color-primary-600: var(--primary-600);
+	--color-primary-700: var(--primary-700);
+	--color-primary-800: var(--primary-800);
+	--color-primary-900: var(--primary-900);
+
+	/* Secondary scale */
+	--color-secondary-100: var(--secondary-100);
+	--color-secondary-200: var(--secondary-200);
+	--color-secondary-300: var(--secondary-300);
+	--color-secondary-400: var(--secondary-400);
+	--color-secondary-500: var(--secondary-500);
+	--color-secondary-600: var(--secondary-600);
+	--color-secondary-700: var(--secondary-700);
+	--color-secondary-800: var(--secondary-800);
+	--color-secondary-900: var(--secondary-900);
+
+	/* Accent scale */
+	--color-accent-100: var(--accent-100);
+	--color-accent-200: var(--accent-200);
+	--color-accent-300: var(--accent-300);
+	--color-accent-400: var(--accent-400);
+	--color-accent-500: var(--accent-500);
+	--color-accent-600: var(--accent-600);
+	--color-accent-700: var(--accent-700);
+	--color-accent-800: var(--accent-800);
+	--color-accent-900: var(--accent-900);
+
+	/* Neutral scale */
+	--color-neutral-100: var(--neutral-100);
+	--color-neutral-200: var(--neutral-200);
+	--color-neutral-300: var(--neutral-300);
+	--color-neutral-400: var(--neutral-400);
+	--color-neutral-500: var(--neutral-500);
+	--color-neutral-600: var(--neutral-600);
+	--color-neutral-700: var(--neutral-700);
+	--color-neutral-800: var(--neutral-800);
+	--color-neutral-900: var(--neutral-900);
+}
 
 body {
 	background: var(--background);
 	color: var(--foreground);
 }
 
-h1 {
+.custom-container {
+	@apply max-w-325 px-4 lg:px-8 mx-auto;
+}
+
+.h1 {
 	@apply font-bold text-2xl leading-10 lg:text-[56px] lg:leading-16;
 }
 
-h2 {
+.h2 {
 	@apply font-bold text-xl leading-6 lg:text-[48px] lg:leading-14;
 }
 
-h3 {
+.h3 {
 	@apply font-bold text-lg leading-4 lg:text-[40px] lg:leading-12;
 }
 .p1 {
