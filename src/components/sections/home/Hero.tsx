@@ -17,7 +17,7 @@ export default function Hero() {
 			className="pt-20 sm:pt-24 relative pb-20 overflow-hidden"
 		>
 			{/* 🌸 Flower */}
-			<motion.div
+			{/* <motion.div
 				initial={false}
 				// animate={{ y: [0, -12, 0] }}
 				animate={{ y: [0, -12, 0], x: [0, 4, 0] }}
@@ -28,6 +28,22 @@ export default function Hero() {
 					ease: "easeInOut",
 				}}
 				className="absolute -bottom-3 -right-8 sm:right-0 max-sm:h-32 max-md:h-52"
+			> */}
+			<motion.div
+				initial={false}
+				animate={{ y: [0, -12, 0], x: [0, 4, 0] }}
+				transition={{
+					duration: 5,
+					repeat: Infinity,
+					ease: "easeInOut",
+				}}
+				style={{
+					position: "absolute",
+					bottom: 0,
+					right: "-2rem",
+					willChange: "transform",
+				}}
+				className="max-sm:h-32 max-md:h-52"
 			>
 				<Image
 					alt="white flower"
