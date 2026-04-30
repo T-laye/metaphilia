@@ -11,15 +11,15 @@ type ButtonProps = {
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const baseStyles =
-	"inline-flex items-center justify-center rounded-[30px] px-10 py-[14px]  lgpx-12 lgpy-[18px] text-sm lg:text-base cursor-pointer transition-all duration-300 whitespace-nowrap font-medium lg:font-bold";
+	"inline-flex items-center justify-center rounded-[30px] px-10 py-[14px]  lgpx-12 lgpy-[18px] text-sm lg:text-base cursor-pointer transition-all duration-300 whitespace-nowrap font-medium lg:font-bold hover:scale-105";
 
 const variants = {
 	primary:
-		"bg-primary-500 text-neutral-100 hover:bg-primary-600 border-2 border-primary-500",
+		"bg-primary-500 text-neutral-100 hover:border-primary-600 hover:bg-primary-600 border-2 border-primary-500",
 	secondary:
 		"bg-secondary-500 text-white border-2 border-secondary-500 hover:bg-secondary-600",
 	ghost:
-		"bg-transparent backdrop-blur-[5px] text-neutral-100 border-2 border-primary-500 hover:bg-neutral-200",
+		"bg-transparent backdrop-blur-[5px] text-neutral-100 border-2 border-primary-500 hover:bg-neutral-300",
 };
 
 const Button = ({

@@ -102,6 +102,9 @@
 	--color-neutral-900: var(--neutral-900);
 }
 
+html {
+	overflow-x: hidden;
+}
 body {
 	background: var(--background);
 	color: var(--foreground);
@@ -127,7 +130,7 @@ body {
 }
 
 .p2 {
-	@apply text-sm leading-6 lg:text-base lg:leading-6;
+	@apply text-sm leading-6 md:text-base lg:leading-6;
 }
 
 .p3 {

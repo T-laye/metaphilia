@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../ui/Button";
+import Image from "next/image";
 
 export default function Hero() {
 	return (
@@ -11,30 +12,40 @@ export default function Hero() {
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: "65% 100%",
 			}}
-			className=" pt-20 sm:pt-24"
+			className="pt-20 sm:pt-24 relative pb-20 overflow-x-hidden"
 		>
+			<div className="absolute bottom-0 -right-8 sm:right-0  max-sm:h-32 max-md:h-52">
+				<Image
+					alt="white flower"
+					src="/images/flower-white.svg"
+					height={300}
+					width={300}
+					className="h-full w-full object-contain"
+				/>
+			</div>
 			<div className="custom-container">
-				<div className="md:w-1/2 flex flex-col gap-7.5 pt-16.75 pb-15">
-					<div className="border border-neutral-100/10 backdrop-blur-2xl rounded-[30px] w-30 h-8.75 flex items-center justify-center bg-neutral-100/30">
-						<span className="text-primary-500 text-base font-medium">
+				<div className="flex flex-col gap-7.5 pt-16.75 max-[450px]:items-center lg:pt-30">
+					<div className="border border-neutral-100/10 backdrop-blur-2xl rounded-[30px] w-fit px-5 py-1 sm:px-8 sm:py-2 flex items-center justify-center bg-neutral-100/30 place-self-start">
+						<span className="text-primary-500 text-base lg:text-2xl font-medium">
 							Metaphilia
 						</span>
 					</div>
 
 					<div>
-						<h1 className="text-neutral-100 font-bold text-[40px] leading-12">
-							Your <span className="text-secondary-500">Pathway</span> to
-							<br />
+						<h1 className="text-neutral-100 font-bold text-[40px] sm:text-[64px] md:text-[80px] lg:text-[96px] leading-[100%]">
+							Your <span className="text-secondary-500">Pathway</span> to{" "}
+							<br className="max-[450px]:hidden" />
 							Mental <span className="text-secondary-500"> Wellness</span>
 						</h1>
-						<p className="p2 text-neutral-100 mt-3">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exe
+						<p className="text-sm sm:text-base md:text-xl lg:text-2xl text-neutral-100 mt-3 max-[450px]:w-full  w-2/3 sm:w1/2">
+							Professional, safe and accessible mental health counselling and
+							consulting built around you. We exist for people who are ready to
+							understand themselves better, improve their relationships, and
+							live healthier, more balanced lives.
 						</p>
 					</div>
 
-					<div className="flex flex-col items-center gap-3.75 sm:flex-row">
+					<div className="flex flex-col items-center gap-3.75 min-[400px]:flex-row">
 						<Button>Book a Session</Button>
 						<Button variant="ghost">Book a Session</Button>
 					</div>
