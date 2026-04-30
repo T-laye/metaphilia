@@ -27,7 +27,7 @@ export default function Hero() {
 					repeat: Infinity,
 					ease: "easeInOut",
 				}}
-				className="absolute -bottom-4 -right-8 sm:right-0 max-sm:h-32 max-md:h-52"
+				className="absolute -bottom-3 -right-8 sm:right-0 max-sm:h-32 max-md:h-52"
 			>
 				<Image
 					alt="white flower"
