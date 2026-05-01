@@ -11,7 +11,7 @@ type ButtonProps = {
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const baseStyles =
-	"inline-flex items-center justify-center rounded-[30px] px-10 py-[14px]  lgpx-12 lgpy-[18px] text-sm lg:text-base cursor-pointer transition-all duration-300 whitespace-nowrap font-medium lg:font-bold hover:scale-105";
+	"inline-flex items-center justify-center rounded-[30px] px-10 py-[14px]  lgpx-12 lgpy-[18px] text-sm lg:text-base cursor-pointer transition-all duration-300 whitespace-nowrap font-medium lg:font-bold hover:scale-105 min-w-[150px] active:scale-100";
 
 const variants = {
 	primary:

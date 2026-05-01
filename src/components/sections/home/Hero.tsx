@@ -3,13 +3,14 @@
 import Button from "../../ui/Button";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { pageRoutes } from "../../../lib/routes";
 
 export default function Hero() {
 	return (
 		<div
 			style={{
 				backgroundImage:
-					"linear-gradient(to top, rgba(0,0,0,0.6)), url('/images/hero-bg.webp')",
+					"linear-gradient(to top, rgba(0,0,0,0.6)), url('/images/home/hero-bg.webp')",
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: "65% 100%",
@@ -17,18 +18,7 @@ export default function Hero() {
 			className="pt-20 sm:pt-24 relative pb-20 overflow-hidden"
 		>
 			{/* 🌸 Flower */}
-			<motion.div
-				initial={false}
-				// animate={{ y: [0, -12, 0] }}
-				animate={{ y: [0, -12, 0], x: [0, 4, 0] }}
-				transition={{
-					duration: 5,
-					repeat: Infinity,
-					repeatType: "loop",
-					ease: "easeInOut",
-				}}
-				className="absolute animate-float -bottom-3 -right-8 sm:right-0 max-sm:h-32 max-md:h-52"
-			>
+			<div className="absolute animate-float -bottom-3 -right-8 sm:right-0 max-sm:h-32 max-md:h-52">
 				<Image
 					alt="white flower"
 					src="/images/flower-white.svg"
@@ -36,7 +26,7 @@ export default function Hero() {
 					width={300}
 					className="h-full w-full object-contain"
 				/>
-			</motion.div>
+			</div>
 
 			<div className="custom-container">
 				<motion.div
@@ -101,7 +91,9 @@ export default function Hero() {
 						className="flex flex-col items-center gap-3.75 min-[400px]:flex-row"
 					>
 						<Button>Book a Session</Button>
-						<Button variant="ghost">Book a Session</Button>
+						<Button variant="ghost" href={pageRoutes.SERVICES}>
+							Explore Services
+						</Button>
 					</motion.div>
 				</motion.div>
 			</div>
