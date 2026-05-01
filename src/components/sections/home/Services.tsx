@@ -111,6 +111,7 @@ const RenderServices = () => {
 									alt={s.title}
 									className="w-full h-full object-cover"
 									width={500}
+                                    loading="eager"
 									height={500}
 								/>
 							</div>

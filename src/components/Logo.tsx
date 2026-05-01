@@ -7,16 +7,25 @@ const Logo = ({
 	variant?: "primary" | "white";
 }) => {
 	return (
-		<div className="h-7.5 md:h-10 lg:h-12.5">
+		<div className="relative h-7.5 md:h-10 lg:h-12.5 aspect-square">
 			<Image
 				src={`/logos/${variant}.svg`}
 				alt="Metaphilia Logo"
-				height={50}
-                loading="eager"
-				width={50}
-				className="h-full w-full object-contain"
+				fill
+				loading="eager"
+				className="object-contain"
 			/>
 		</div>
+		// <div className="h-7.5 md:h-10 lg:h-12.5">
+		// 	<Image
+		// 		src={`/logos/${variant}.svg`}
+		// 		alt="Metaphilia Logo"
+		// 		height={50}
+		//         loading="eager"
+		// 		width={50}
+		// 		className="h-full w-full object-contain"
+		// 	/>
+		// </div>
 	);
 };
 
