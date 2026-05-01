@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { serviceDetails } from "../../../lib/contents";
+import { motion } from "framer-motion";
 
 /* eslint-disable @next/next/no-img-element */
+
 const Stats = () => {
 	const statsDetails = [
 		{
@@ -23,17 +27,35 @@ const Stats = () => {
 
 	return (
 		<section className="py-6 lg:py-12 my-15 lg:my-30 bg-accent-200 ">
-			<div className="custom-container flex justify-center sm:justify-between flex-wrap gap-x-5 gap-y-7 ">
+			<motion.div
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true }}
+				variants={{
+					hidden: {},
+					visible: {
+						transition: { staggerChildren: 0.2 },
+					},
+				}}
+				className="custom-container flex justify-center sm:justify-between flex-wrap gap-x-5 gap-y-7 "
+			>
 				{statsDetails.map((s, i) => (
-					<div key={i}>
+					<motion.div
+						key={i}
+						variants={{
+							hidden: { opacity: 0, y: 20 },
+							visible: { opacity: 1, y: 0 },
+						}}
+						transition={{ duration: 0.5, ease: "easeOut" }}
+					>
 						<div className="flex items-center justify-center sm:justify-start gap-3.5 lg:gap-7.5">
 							<img src={s.img} alt={s.title} className="w-8 lg:w-12" />
 							<span className="font-bold text-3xl lg:text-4xl ">{s.value}</span>
 						</div>
 						<p className="font-medium lg:text-xl">{s.title}</p>
-					</div>
+					</motion.div>
 				))}
-			</div>
+			</motion.div>
 		</section>
 	);
 };
@@ -42,7 +64,13 @@ const RenderServices = () => {
 	return (
 		<section className="py-7.5 md:py-15 bg-primary-500">
 			<div className="custom-container text-neutral-100">
-				<div>
+				{/* Header */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5 }}
+				>
 					<h3 className="mx-auto font-semibold sm:text-lg lg:text-2xl md:font-medium bg-neutral-100/30 w-fit rounded-[30px] px-4.5 py-[5.5px] lg:px-[34.5px] lg:py-3">
 						Our Services
 					</h3>
@@ -52,11 +80,29 @@ const RenderServices = () => {
 						you want to be. All sessions are available in-person and online,
 						giving you the flexibility to access support on your terms.
 					</p>
-				</div>
-				<div className="mt-13.5 lg:mt-15 grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-7.5 ">
+				</motion.div>
+
+				{/* Grid */}
+				<motion.div
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={{
+						hidden: {},
+						visible: {
+							transition: { staggerChildren: 0.15 },
+						},
+					}}
+					className="mt-13.5 lg:mt-15 grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-7.5 "
+				>
 					{serviceDetails.map((s, i) => (
-						<div
+						<motion.div
 							key={i}
+							variants={{
+								hidden: { opacity: 0, y: 30 },
+								visible: { opacity: 1, y: 0 },
+							}}
+							transition={{ duration: 0.5, ease: "easeOut" }}
 							className="max-[500px]:max-w-80 h-full place-self-center  rounded-tl-[15px] rounded-tr-[15px] overflow-hidden"
 						>
 							<div className="h-1/2">
@@ -74,9 +120,9 @@ const RenderServices = () => {
 								</h5>
 								<p className="line-clamp-4 md:text-lg xl:text-2xl">{s.desc}</p>
 							</div>
-						</div>
+						</motion.div>
 					))}
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	);
@@ -86,6 +132,7 @@ export default function Services() {
 	return (
 		<div>
 			<Stats />
+
 			<div className="relative">
 				<div className="absolute animate-float -scale-x-100  -top-13.5 -left-16 lg:-top-28 lg:-left-12  h-32.5 md:h-44 lg:h-62">
 					<Image
@@ -96,6 +143,7 @@ export default function Services() {
 						className="h-full w-full object-contain"
 					/>
 				</div>
+
 				<RenderServices />
 			</div>
 		</div>
