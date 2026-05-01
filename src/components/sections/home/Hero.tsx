@@ -9,8 +9,7 @@ export default function Hero() {
 	return (
 		<div
 			style={{
-				backgroundImage:
-					"linear-gradient(to top, rgba(0,0,0,0.6)), url('/images/home/hero-bg.webp')",
+				backgroundImage:"url('/images/home/hero-bg.webp')",
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: "65% 100%",
