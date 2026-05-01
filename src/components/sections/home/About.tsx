@@ -130,10 +130,10 @@ const About = () => {
 						initial={{ opacity: 0, scale: 0.85 }}
 						whileInView={{ opacity: 1, scale: 1 }}
 						viewport={{ once: true }}
-						// transition={{ duration: 0.5, ease: "easeOut" }}
-						className="h-30 min-w-30 md:h-42.5 md:min-w-42.5"
-						animate={{ y: [0, -6, 0] }}
-						transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+						transition={{ duration: 0.5, ease: "easeOut" }}
+						className="h-30 min-w-30 md:h-42.5 md:min-w-42.5 animate-pulse"
+						// animate={{ y: [0, -6, 0] }}
+						// transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
 					>
 						<Image
 							alt="white flower"
