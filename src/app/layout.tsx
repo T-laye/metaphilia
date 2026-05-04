@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/Header";
 import Providers from "../components/providers";
+import Contact from "../components/sections/home/Contact";
+import Footer from "../components/Footer";
 
 const figtree = localFont({
 	src: [
@@ -108,6 +110,8 @@ export default function RootLayout({
 			<body className="min-h-full flex flex-col">
 				<Header />
 				<Providers>{children}</Providers>
+				<Contact />
+				<Footer />
 			</body>
 		</html>
 	);

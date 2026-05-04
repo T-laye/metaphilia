@@ -1,5 +1,9 @@
-import React from "react";
+import SubTitle from "../../components/SubTitle";
 
 export default function Page() {
-	return <div className="bg-red-400 pt-40 h-screen">Page</div>;
+	return (
+		<div className="pt-20 lg:pt-24 min-h-[50vh] ">
+			<SubTitle title="About Us" breadcrumb="About" />
+		</div>
+	);
 }
