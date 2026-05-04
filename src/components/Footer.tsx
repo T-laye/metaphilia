@@ -20,7 +20,7 @@ export default function Footer() {
 				/>
 			</div>
 			<div className="custom-container -mt-22">
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-sm sm:gap-10 sm:text-base md:gap-20 xl:text-lg">
+				<div className="flex flex-col sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-sm sm:gap-10 sm:text-base md:gap-20 xl:text-lg">
 					{/* logo */}
 					<div>
 						<Logo />
@@ -32,7 +32,7 @@ export default function Footer() {
 						</p>
 					</div>
 
-					<div className="flex gap-12 sm:gap-40 lg:gap-20 xl:gap-24">
+					<div className="flex gap-12 sm:gap-20 lg:gap-20 xl:gap-24 max-[315px]:flex-col max-[315px]:gap-8">
 						{/* Services */}
 						<div className="md:order-2">
 							<h4 className="font-bold">Our Services</h4>

@@ -44,7 +44,7 @@ export default function Contact() {
 					{
 						icon: <RxEnvelopeClosed className="text-2xl md:text-[40px]" />,
 						content: (
-							<div className="mt-3.5">
+							<div className="mt-3.5 max-[340px]:text-sm">
 								<Link href="mailto:INFO@METAPHILIACONSULT.COM">
 									INFO@METAPHILIACONSULT.COM
 								</Link>
