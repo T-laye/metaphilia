@@ -20,7 +20,20 @@ export default function Faq() {
 					discuss.
 				</p>
 
-				<div className="mt-7.5 grid grid-cols-1 gap-10 md:grid-cols-2 lg:mt-20 lg:gap-x-16">
+				<motion.div
+					className="mt-7.5 grid grid-cols-1 gap-10 md:grid-cols-2 lg:mt-20 lg:gap-x-16"
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true, margin: "-50px" }}
+					variants={{
+						hidden: {},
+						visible: {
+							transition: {
+								staggerChildren: 0.12,
+							},
+						},
+					}}
+				>
 					{faqDetails.map((f, i) => (
 						<FaqList
 							key={i}
@@ -30,7 +43,7 @@ export default function Faq() {
 							onClick={() => setOpenIndex(openIndex === i ? null : i)}
 						/>
 					))}
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	);
@@ -48,7 +61,13 @@ function FaqList({
 	onClick: () => void;
 }) {
 	return (
-		<div>
+		<motion.div
+			variants={{
+				hidden: { opacity: 0, y: 40 },
+				visible: { opacity: 1, y: 0 },
+			}}
+			transition={{ duration: 0.5, ease: "easeOut" }}
+		>
 			<div
 				className="flex gap-4 items-center justify-between cursor-pointer"
 				onClick={onClick}
@@ -77,6 +96,6 @@ function FaqList({
 					</motion.div>
 				)}
 			</AnimatePresence>
-		</div>
+		</motion.div>
 	);
 }

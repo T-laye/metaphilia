@@ -141,7 +141,7 @@ export default function Services() {
 			<div className="relative">
 				<div className="absolute animate-float -scale-x-100  -top-13.5 -left-16 lg:-top-28 lg:-left-12  h-32.5 md:h-44 lg:h-62">
 					<Image
-						alt="white flower"
+						alt="green flower"
 						src="/images/flower-green.svg"
 						height={300}
 						width={300}

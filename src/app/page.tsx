@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import About from "../components/sections/home/About";
 import Contact from "../components/sections/home/Contact";
 import Faq from "../components/sections/home/Faq";
@@ -12,6 +13,7 @@ export default function Home() {
 			<Services />
 			<Faq />
 			<Contact />
+			<Footer />
 		</>
 	);
 }
