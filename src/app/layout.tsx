@@ -48,6 +48,10 @@ const figtree = localFont({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL(
+		process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+	),
+
 	title: "Metaphilia",
 	description:
 		"Professional, safe and accessible mental health counselling and consulting built around you. We help you understand yourself better, improve relationships, and live a healthier, more balanced life.",

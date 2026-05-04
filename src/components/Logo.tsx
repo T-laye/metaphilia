@@ -7,7 +7,7 @@ const Logo = ({
 	variant?: "primary" | "white";
 }) => {
 	return (
-		<div className="relative h-7.5 md:h-10 lg:h-12.5 aspect-square">
+		<div className="relative w-32.25 h-7.5 md:h-10 md:w-44 lg:h-12.5 lg:w-53.5 aspect-square">
 			<Image
 				src={`/logos/${variant}.svg`}
 				alt="Metaphilia Logo"

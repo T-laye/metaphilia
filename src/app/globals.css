@@ -137,6 +137,15 @@ body {
 	@apply text-xs leading-5;
 }
 
+.service-card-overlay {
+	opacity: 0;
+}
+
+.service-card:hover .service-card-overlay {
+	opacity: 100;
+	transition: all 0.3s ease;
+}
+
 @keyframes float {
 	0% {
 		transform: translate(0px, 0px);

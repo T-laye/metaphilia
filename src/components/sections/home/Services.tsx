@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { serviceDetails } from "../../../lib/contents";
 import { motion } from "framer-motion";
+import Button from "../../ui/Button";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -26,7 +27,7 @@ const Stats = () => {
 	];
 
 	return (
-		<section className="py-6 lg:py-12 my-15 lg:my-30 bg-accent-200 ">
+		<section className="py-15 lg:py-12 my-15 lg:my-30 bg-accent-200 ">
 			<motion.div
 				initial="hidden"
 				whileInView="visible"
@@ -37,7 +38,7 @@ const Stats = () => {
 						transition: { staggerChildren: 0.2 },
 					},
 				}}
-				className="custom-container flex justify-center sm:justify-between flex-wrap gap-x-5 gap-y-7 "
+				className="custom-container flex justify-center max-sm:flex-col max-sm:items-center sm:justify-between gap-15 "
 			>
 				{statsDetails.map((s, i) => (
 					<motion.div
@@ -103,23 +104,26 @@ const RenderServices = () => {
 								visible: { opacity: 1, y: 0 },
 							}}
 							transition={{ duration: 0.5, ease: "easeOut" }}
-							className="max-[500px]:max-w-80 h-full place-self-center  rounded-tl-[15px] rounded-tr-[15px] overflow-hidden"
+							className="service-card relative max-[500px]:max-w-80 h-full place-self-center  rounded-[15px] overflow-hidden cursor-pointer"
 						>
+							<div className="service-card-overlay absolute inset-0 bg-black/20 flex justify-center items-start">
+								<Button className="mt-[30%]">Read More</Button>
+							</div>
 							<div className="h-1/2">
 								<Image
 									src={s.img}
 									alt={s.title}
 									className="w-full h-full object-cover"
 									width={500}
-                                    loading="eager"
+									loading="eager"
 									height={500}
 								/>
 							</div>
 							<div className="px-4.5">
-								<h5 className="my-3.5 text-xl sm:text-2xl xl:text-[32px] font-semibold">
+								<h5 className="my-3.5 text-xl sm:text-2xl xl:text-[28px] font-semibold">
 									{s.title}
 								</h5>
-								<p className="line-clamp-4 md:text-lg xl:text-2xl">{s.desc}</p>
+								<p className="line-clamp-4 md:text-lg xl:text-xl">{s.desc}</p>
 							</div>
 						</motion.div>
 					))}

@@ -7,15 +7,17 @@ type ButtonProps = {
 	children: React.ReactNode;
 	href?: string;
 	className?: string;
-	variant?: "primary" | "secondary" | "ghost";
+	variant?: "primary" | "secondary" | "ghost" | "reverse";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const baseStyles =
-	"inline-flex items-center justify-center rounded-[30px] px-10 py-[14px]  lgpx-12 lgpy-[18px] text-sm lg:text-base cursor-pointer transition-all duration-300 whitespace-nowrap font-medium lg:font-bold hover:scale-105 min-w-[150px] active:scale-100";
+	"inline-flex items-center justify-center rounded-[30px] px-10 py-[14px]  lgpx-12 lgpy-[18px] text-sm lg:text-base cursor-pointer transition-all duration-300 whitespace-nowrap font-semibold lg:font-bold hover:scale-105 min-w-[150px] active:scale-100";
 
 const variants = {
 	primary:
 		"bg-primary-500 text-neutral-100 hover:border-primary-600 hover:bg-primary-600 border-2 border-primary-500",
+	reverse:
+		"bg-neutral-100 text-primary-500 hover:border-primary-500 hover:bg-primary-600 border-2 border-neutral-100 hover:text-neutral-100",
 	secondary:
 		"bg-secondary-500 text-white border-2 border-secondary-500 hover:bg-secondary-600",
 	ghost:
