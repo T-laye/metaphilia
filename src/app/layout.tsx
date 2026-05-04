@@ -107,7 +107,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={`${figtree.variable} h-full antialiased`}>
-			<body className="min-h-full flex flex-col">
+			<body className="min-h-full flex flex-col overflow-x-hidden">
 				<Header />
 				<Providers>{children}</Providers>
 				<Contact />
