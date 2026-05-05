@@ -4,7 +4,6 @@ import { SlPhone } from "react-icons/sl";
 import Link from "next/link";
 import { contactDetails, serviceDetails } from "../../lib/contents";
 import { RxEnvelopeClosed } from "react-icons/rx";
-import { LiaClock } from "react-icons/lia";
 import Button from "../../components/ui/Button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -218,7 +217,7 @@ export default function Page() {
 								</Link>
 							</div>
 						</div>
-						<div className="flex gap-3.5 mt-7.5">
+						{/* <div className="flex gap-3.5 mt-7.5">
 							<div className="h-10 min-w-10 w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
 								<LiaClock className="text-3xl" />
 							</div>
@@ -232,7 +231,7 @@ export default function Page() {
 									available outside office hours by appointment)
 								</p>
 							</div>
-						</div>
+						</div> */}
 						<div className="flex gap-3.5 mt-7.5">
 							{/* <div className="h-10 min-w-10 w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
 								<LiaClock className="text-3xl md:text-[45px]" />
