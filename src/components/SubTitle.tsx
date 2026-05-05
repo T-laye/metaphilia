@@ -17,7 +17,7 @@ const SubTitle = ({
 				<h4 className="uppercase text-base md:text-xl lg:text-2xl">{`Home > ${breadcrumb}`}</h4>
 
 				{/* flower */}
-				<div className="absolute animate-float top-full right-[-58%] min-[450px]:right-[-45%] min-[550px]:right-[-35%] sm:right-[-30%] md:right-[-30%] lg:right-[-35%] xl:right-[-25%] 2xl:right-[-16%] h-[254.38px] md:h-75 lg:h-106.25 -z-10">
+				<div className="absolute animate-float top-full right-[-58%] min-[450px]:right-[-45%] min-[550px]:right-[-35%] sm:right-[-30%] md:right-[-30%] lg:right-[-35%] xl:right-[-25%] 2xl:right-[-16%] h-[254.38px] md:h-75 lg:h-106.25 -z-10 max-md:z-10">
 					<Image
 						alt="green flower"
 						src="/images/flower-green.svg"
