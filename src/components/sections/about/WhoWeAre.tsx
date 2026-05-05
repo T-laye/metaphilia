@@ -52,7 +52,7 @@ const WhoWeAre = () => {
 					<h2 className="text-2xl leading-10 font-bold mb-3.5 lg:text-[32px]">
 						Metaphilia
 					</h2>
-					<p className="text-sm leading-6 text-center md:text-start sm:text-base lg:text-xl xl:text-2xl lg:leading-10">
+					<p className="text-sm leading-6 text-center md:text-start sm:text-base md:text-lg lg:text-xl xl:text-2xl lg:leading-10">
 						Metaphilia Consult Limited is a professional counselling and mental
 						health consulting firm committed to providing accessible
 						psychological support available to individuals, couples, families,
@@ -83,7 +83,7 @@ const WhoWeAre = () => {
 								},
 							},
 						}}
-						className="flex mt-7.5 md:15 lg:mt-30 flex-col gap-4 md:gap-3 lg:gap-5 md:flex-row"
+						className="flex mt-7.5 md:mt-15 lg:mt-30 flex-col gap-4 md:gap-3 lg:gap-5 md:flex-row"
 					>
 						{details.map((t, i) => (
 							<motion.li

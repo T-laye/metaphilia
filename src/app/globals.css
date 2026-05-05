@@ -130,7 +130,7 @@ body {
 }
 
 .p2 {
-	@apply text-sm leading-6 md:text-base lg:leading-10 lg:text-2xl;
+	@apply text-sm leading-6 sm:text-base md:text-xl lg:leading-10 lg:text-2xl;
 }
 
 .p3 {

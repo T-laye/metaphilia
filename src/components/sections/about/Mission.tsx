@@ -23,7 +23,7 @@ const Mission = () => {
 	];
 
 	return (
-		<section className="mt-15 xl:mt-30">
+		<section className="mt-15  lg:mt-30">
 			<div className="custom-container">
 				<motion.h3
 					initial={{ opacity: 0, y: 30 }}
@@ -116,7 +116,7 @@ const Mission = () => {
 									}}
 									transition={{ duration: 0.5 }}
 								>
-									<span className="font-semibold sm:text-lg bg-secondary-100 min-w-10 min-h-10 h-10 w-10 lg:min-h-15 lg:min-w-15 lg:h-15 lg:w-15 rounded-full inline-flex items-center justify-center md:text-lg">
+									<span className="font-semibold sm:text-base bg-secondary-100 min-w-10 min-h-10 h-10 w-10 lg:min-h-15 lg:min-w-15 lg:h-15 lg:w-15 rounded-full inline-flex items-center justify-center md:text-lg">
 										{i + 1}
 									</span>
 									<div className="p2">
