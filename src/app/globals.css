@@ -139,11 +139,11 @@ body {
 
 .input-class,
 .select-class {
-	@apply bg-neutral-100 border border-neutral-100 rounded-[5px] h-10.75 w-full py-[9.5px] px-3.5 placeholder:text-neutral-400 focus:outline-none focus:border-primary-500 caret-primary-500 duration-150 placeholder:text-sm;
+	@apply bg-neutral-100 border border-neutral-100 rounded-[5px] h-10.75 md:h-15 w-full py-[9.5px] px-3.5 placeholder:text-neutral-400 focus:outline-none focus:border-primary-500 caret-primary-500 duration-150 placeholder:text-sm md:placeholder:text-base;
 }
 
 .textarea {
-	@apply bg-neutral-100 border border-neutral-100 rounded-[5px] h-30 w-full py-[9.5px] px-3.5 placeholder:text-neutral-400 focus:outline-none focus:border-primary-500 caret-primary-500 duration-150 placeholder:text-sm;
+	@apply bg-neutral-100 border border-neutral-100 rounded-[5px] h-30 md:h-65 md:placeholder:text-base w-full py-[9.5px] px-3.5 placeholder:text-neutral-400 focus:outline-none focus:border-primary-500 caret-primary-500 duration-150 placeholder:text-sm resize-none;
 }
 
 .service-card-overlay {

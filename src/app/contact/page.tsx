@@ -97,7 +97,7 @@ function ContactForm() {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
-					className="w-full flex flex-col gap-5 mt-5"
+					className="w-full flex flex-col gap-5 mt-5 md:mt-7.5"
 				>
 					<input
 						placeholder="Your Name"
@@ -156,19 +156,19 @@ export default function Page() {
 		<div className="pt-20 lg:pt-24 min-h-[50vh] ">
 			<SubTitle title="Contact Us" breadcrumb="Contact us" />
 
-			<div className="custom-container py-15">
-				<div>
+			<div className="custom-container py-15 lg:py-30 flex flex-col gap-7.5 lg:gap-15 lg:flex-row lg:items-center">
+				<div className="lg:flex-1">
 					<motion.h3
 						initial={{ opacity: 0, y: 30 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
-						className="mx-auto font-semibold sm:text-lg mb-3.5 md:mb-7.5 bg-secondary-100 w-fit rounded-[30px] px-7.25 py-[5.5px] lg:text-2xl"
+						className="max-lg:mx-auto font-semibold sm:text-lg mb-3.5 md:mb-7.5 bg-secondary-100 w-fit rounded-[30px] px-7.25 py-[5.5px] lg:text-2xl"
 					>
 						Contact Form
 					</motion.h3>
 
-					<h2 className="text-center text-2xl leading-10 font-bold mb-3.5 lg:text-[32px]">
+					<h2 className="max-lg:text-center text-2xl leading-10 font-bold mb-3.5 lg:text-[32px]">
 						Get In Touch
 					</h2>
 
@@ -177,7 +177,7 @@ export default function Page() {
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5, delay: 0.1 }}
-						className="p2 mt-3.5 text-center max-w-2xl mx-auto"
+						className="p2 mt-3.5 max-lg:text-center max-w-2xl mx-auto"
 					>
 						Whether you&apos;re ready to book a session, want to ask a question
 						first, or are enquiring on behalf of your organisation, we&apos;d
@@ -188,14 +188,14 @@ export default function Page() {
 					<div className="mt-7.5">
 						<div className="flex gap-3.5">
 							<div className="h-10 w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
-								<SlPhone className="text-2xl md:text-[40px]" />
+								<SlPhone className="text-2xl" />
 							</div>
 							<div className="flex flex-col gap-1.5">
 								<h5 className="text-primary-500 font-semibold text-xl">
 									PHONE:
 								</h5>
 								<Link
-									className="text-base"
+									className="text-base md:text-xl"
 									href={`tel:${contactDetails.phone}`}
 								>
 									{contactDetails.phone}
@@ -204,14 +204,14 @@ export default function Page() {
 						</div>
 						<div className="flex gap-3.5 mt-7.5">
 							<div className="h-10 w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
-								<RxEnvelopeClosed className="text-2xl md:text-[40px]" />
+								<RxEnvelopeClosed className="text-2xl" />
 							</div>
 							<div className="flex flex-col gap-1.5">
 								<h5 className="text-primary-500 font-semibold text-xl">
 									EMAIL:
 								</h5>
 								<Link
-									className="text-base"
+									className="text-base md:text-xl"
 									href={`mailto:${contactDetails.email}`}
 								>
 									{contactDetails.email}
@@ -220,13 +220,13 @@ export default function Page() {
 						</div>
 						<div className="flex gap-3.5 mt-7.5">
 							<div className="h-10 min-w-10 w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
-								<LiaClock className="text-3xl md:text-[45px]" />
+								<LiaClock className="text-3xl" />
 							</div>
 							<div className="flex flex-col gap-1.5">
 								<h5 className="text-primary-500 font-semibold text-xl">
 									OFFICE HOURS:
 								</h5>
-								<p className="text-base">
+								<p className="text-base md:text-xl">
 									Monday – Friday: 8:00 AM – 5:00 PM <br /> Saturday: 9:00 AM –
 									2:00 PM <br /> Sunday: Closed <br /> (Virtual sessions
 									available outside office hours by appointment)
@@ -255,7 +255,7 @@ export default function Page() {
 					</div>
 				</div>
 
-				<div className="bg-secondary-100 rounded-[20px] p-7.5 mt-7.5">
+				<div className="bg-secondary-100 rounded-[20px] p-7.5 lg:flex-1">
 					<h4 className="text-xl md:text-2xl font-bold">Send us a message</h4>
 					<p className="p2 mt-1.5">
 						Have an inquiry, partnership proposal, or a general question? Fill
