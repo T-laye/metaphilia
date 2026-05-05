@@ -137,6 +137,15 @@ body {
 	@apply text-xs leading-5;
 }
 
+.input-class,
+.select-class {
+	@apply bg-neutral-100 border border-neutral-100 rounded-[5px] h-10.75 w-full py-[9.5px] px-3.5 placeholder:text-neutral-400 focus:outline-none focus:border-primary-500 caret-primary-500 duration-150 placeholder:text-sm;
+}
+
+.textarea {
+	@apply bg-neutral-100 border border-neutral-100 rounded-[5px] h-30 w-full py-[9.5px] px-3.5 placeholder:text-neutral-400 focus:outline-none focus:border-primary-500 caret-primary-500 duration-150 placeholder:text-sm;
+}
+
 .service-card-overlay {
 	opacity: 0;
 }

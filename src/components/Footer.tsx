@@ -4,6 +4,7 @@ import Link from "next/link";
 import { pageRoutes } from "../lib/routes";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookSquare, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { contactDetails } from "../lib/contents";
 
 export default function Footer() {
 	return (
@@ -109,42 +110,42 @@ export default function Footer() {
 								Email:{" "}
 								<Link
 									className="whitespace-nowrap hover:text-primary-500 hover:font-semibold duration-150"
-									href="mailto:info@metaphiliaconsult.com"
+									href={`mailto:${contactDetails.email}`}
 								>
-									info@metaphiliaconsult.com
+									{contactDetails.email}
 								</Link>
 							</p>
 							<p>
 								Phone:{" "}
 								<Link
 									className="whitespace-nowrap hover:text-primary-500 hover:font-semibold duration-150"
-									href="tel:+2348139353850"
+									href={`tel:${contactDetails.phone}`}
 								>
-									+234 813 935 3850
+									{contactDetails.phone}
 								</Link>
 							</p>
 							<div className="flex text-lg gap-5 mt-2">
 								<Link
 									className="hover:text-primary-500 hover:scale-150 duration-150"
-									href="#"
+									href={contactDetails.facebook}
 								>
 									<FaFacebookSquare />
 								</Link>
 								<Link
 									className="hover:text-primary-500 hover:scale-150 duration-150"
-									href="#"
+									href={contactDetails.instagram}
 								>
 									<AiFillInstagram />
 								</Link>
 								<Link
 									className="hover:text-primary-500 hover:scale-150 duration-150"
-									href="#"
+									href={contactDetails.youtube}
 								>
 									<FaYoutube />
 								</Link>
 								<Link
 									className="hover:text-primary-500 hover:scale-150 duration-150"
-									href="#"
+									href={contactDetails.linkedin}
 								>
 									<FaLinkedin />
 								</Link>

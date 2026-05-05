@@ -7,6 +7,7 @@ import { SlPhone } from "react-icons/sl";
 import Button from "../../ui/Button";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { contactDetails } from "../../../lib/contents";
 
 export default function Contact() {
 	return (
@@ -38,6 +39,9 @@ export default function Contact() {
 							<div className="flex flex-col mt-3.5">
 								<span>MON - FRI</span>
 								<span>8:00AM - 5:00PM</span>
+								<span className="text-sm italic">
+									Virtual sessions available outside office hours by appointment
+								</span>
 							</div>
 						),
 					},
@@ -45,8 +49,11 @@ export default function Contact() {
 						icon: <RxEnvelopeClosed className="text-2xl md:text-[40px]" />,
 						content: (
 							<div className="mt-3.5 max-[340px]:text-sm">
-								<Link href="mailto:INFO@METAPHILIACONSULT.COM">
-									INFO@METAPHILIACONSULT.COM
+								<Link
+									href={`mailto:${contactDetails.email}`}
+									className="uppercase"
+								>
+									{contactDetails.email}
 								</Link>
 							</div>
 						),
@@ -55,7 +62,9 @@ export default function Contact() {
 						icon: <SlPhone className="text-2xl md:text-[40px]" />,
 						content: (
 							<div className="mt-3.5">
-								<Link href="tel:+2348139353850">+234 813 935 3850</Link>
+								<Link href={`tel:${contactDetails.phone.trim()}`}>
+									{contactDetails.phone.trim()}
+								</Link>
 							</div>
 						),
 					},

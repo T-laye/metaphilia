@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Providers from "../components/providers";
 import Contact from "../components/sections/home/Contact";
 import Footer from "../components/Footer";
+import { Toaster } from "sonner";
 
 const figtree = localFont({
 	src: [
@@ -112,6 +113,7 @@ export default function RootLayout({
 				<Providers>{children}</Providers>
 				<Contact />
 				<Footer />
+				<Toaster position="top-right" richColors />
 			</body>
 		</html>
 	);

@@ -1,3 +1,12 @@
+export const contactDetails = {
+	email: "info@metaphiliaconsult.com",
+	phone: "+234 813 935 3850",
+	facebook: "",
+	instagram: "",
+	linkedin: "",
+	youtube: "",
+};
+
 export const serviceDetails = [
 	{
 		img: "/images/services/individual-coaching.png",
