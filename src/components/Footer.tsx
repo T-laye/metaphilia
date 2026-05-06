@@ -4,7 +4,7 @@ import Link from "next/link";
 import { pageRoutes } from "../lib/routes";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookSquare, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { contactDetails } from "../lib/contents";
+import { contactDetails, serviceDetails } from "../lib/contents";
 
 export default function Footer() {
 	return (
@@ -38,13 +38,16 @@ export default function Footer() {
 						<div className="md:order-2">
 							<h4 className="font-bold">Our Services</h4>
 							<div className="flex flex-col mt-5 gap-5 md:mt-1 md:gap-0">
-								<Link
-									className="whitespace-nowrap hover:text-primary-500 hover:font-semibold duration-150"
-									href={pageRoutes.ABOUT}
-								>
-									Individual Therapy
-								</Link>
-								<Link
+								{serviceDetails.map((s) => (
+									<Link
+										key={s.slug}
+										className="whitespace-nowrap hover:text-primary-500 hover:font-semibold duration-150"
+										href={pageRoutes.SERVICE(s.slug)}
+									>
+										{s.title}
+									</Link>
+								))}
+								{/* <Link
 									className="whitespace-nowrap hover:text-primary-500 hover:font-semibold duration-150"
 									href={pageRoutes.SERVICES}
 								>
@@ -73,7 +76,7 @@ export default function Footer() {
 									href={pageRoutes.SERVICES}
 								>
 									Leadership Coaching
-								</Link>
+								</Link> */}
 							</div>
 						</div>
 						{/* Company */}
@@ -94,7 +97,7 @@ export default function Footer() {
 								</Link>
 								<Link
 									className="whitespace-nowrap hover:text-primary-500 hover:font-semibold duration-150"
-									href={pageRoutes.SERVICES}
+									href={pageRoutes.IMPACT}
 								>
 									Impact
 								</Link>

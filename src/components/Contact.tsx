@@ -41,11 +41,11 @@ export default function Contact() {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-							className="text-neutral-100 text-sm font-semibold text-center leading-6 mt-4.5 md:text-2xl md:leading-10 max-w-2xl mx-auto"
+							className="text-neutral-100 text-sm font-semibold text-center leading-6 mt-4.5 md:text-2xl md:leading-10 max-w-3xl mx-auto"
 						>
-							Not sure which package is right for you? Book a free 20-minute
-							discovery call and let us help you find the best fit. No pressure,
-							no commitment required.
+							Not sure which package is right for you? Book a{" "}
+							<span className="">free 15-minute</span> discovery call and let us
+							help you find the best fit. No pressure, no commitment required.
 						</motion.p>
 						<motion.div
 							initial={{ opacity: 0, y: 30 }}
@@ -59,6 +59,8 @@ export default function Contact() {
 					</div>
 				</div>
 			</motion.section>
+
+			{/* CONTACT */}
 			<section className="bg-secondary-400">
 				<div className="h-6 flex">
 					<div className="bg-primary-500 flex-1"></div>
