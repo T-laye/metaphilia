@@ -1,6 +1,6 @@
 export const contactDetails = {
 	email: "info@metaphiliaconsult.com",
-	phone: "+234 813 935 3850",
+	phone: "+234 706 889 9866",
 	facebook: "",
 	instagram: "",
 	linkedin: "",
