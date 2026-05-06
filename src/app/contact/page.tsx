@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import SubTitle from "../../components/SubTitle";
 import { SlPhone } from "react-icons/sl";
@@ -187,6 +188,27 @@ export default function Page() {
 
 					<div className="mt-7.5">
 						<div className="flex gap-3.5">
+							<div className="h-10 min-w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
+								{/* <SlPhone className="text-2xl" /> */}
+								<img
+									src="/icons/location.svg"
+									alt="location"
+									className="w-5.5"
+								/>
+							</div>
+							<div className="flex flex-col gap-1.5">
+								<h5 className="text-primary-500 font-semibold text-xl">
+									OFFICE ADDRESS:
+								</h5>
+								<div
+									className="text-base md:text-xl"
+									// href={`tel:${contactDetails.phone}`}
+								>
+									{contactDetails.address}
+								</div>
+							</div>
+						</div>
+						<div className="flex gap-3.5 mt-7.5">
 							<div className="h-10 w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
 								<SlPhone className="text-2xl" />
 							</div>

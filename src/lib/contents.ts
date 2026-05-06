@@ -5,6 +5,7 @@ export const contactDetails = {
 	instagram: "",
 	linkedin: "",
 	youtube: "",
+	address: "KM 1, Eku/Osubi Express Way, Osubi, Delta State. Nigeria.",
 };
 
 export const serviceDetails = [
