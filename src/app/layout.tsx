@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/Header";
 import Providers from "../components/providers";
-import Contact from "../components/sections/home/Contact";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { Toaster } from "sonner";
 
