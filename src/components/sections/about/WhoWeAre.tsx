@@ -95,7 +95,7 @@ const WhoWeAre = () => {
 								className="flex gap-2 md:gap-3"
 							>
 								<GiCheckMark className="text-primary-500 min-w-3.5 md:min-w-7.5 md:mt-2 text-2xl" />
-								<div className="flex flex-col md:text-xl lg:text-2xl lg:leading-10">
+								<div className="flex flex-col text-sm md:text-xl lg:text-2xl lg:leading-10">
 									<span className="font-bold">{t.title}</span>
 									<p>{t.text}</p>
 								</div>
