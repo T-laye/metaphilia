@@ -23,9 +23,9 @@ export default function Page() {
 				}}
 				className="custom-container  py-15 lg:py-30 grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-7.5"
 			>
-				{serviceDetails.map((s, i) => (
+				{serviceDetails.map((s) => (
 					<motion.div
-						key={i}
+						key={s.slug}
 						variants={{
 							hidden: { opacity: 0, y: 30 },
 							visible: { opacity: 1, y: 0 },

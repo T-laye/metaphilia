@@ -11,32 +11,44 @@ export const serviceDetails = [
 	{
 		img: "/images/services/individual-coaching.png",
 		title: "Individual Coaching",
+		slug: "individual-coaching",
+		price: 500000,
 		desc: "Our one-on-one counselling sessions offer a private, structured space where you can gain clarity, emotional support and understand the",
 	},
 	{
 		img: "/images/services/pre-marital.png",
+		price: 405000,
 		title: "Pre-marital Counselling",
+		slug: "pre-marital-ounselling",
 		desc: "Our one-on-one counselling sessions offer a private, structured space where you can gain clarity, emotional support and understand the",
 	},
 	{
+		price: 25000,
 		img: "/images/services/marital.png",
 		title: "Marital & Relationship",
+		slug: "marital-and-relationship",
 		desc: "Our one-on-one counselling sessions offer a private, structured space where you can gain clarity, emotional support and understand the",
 	},
 	{
+		price: 35000,
 		img: "/images/services/family.png",
 		title: "Family Counselling",
+		slug: "family-counselling",
 		desc: "Our one-on-one counselling sessions offer a private, structured space where you can gain clarity, emotional support and understand the",
 	},
 	{
 		img: "/images/services/organizational.png",
 		title: "Organisational Coaching",
+		slug: "organisational-coaching",
 		desc: "Our one-on-one counselling sessions offer a private, structured space where you can gain clarity, emotional support and understand the",
+		price: 65000,
 	},
 	{
 		img: "/images/services/leadership.png",
 		title: "Executive/Leadership Coaching",
+		slug: "executive-leadership-coaching",
 		desc: "Our one-on-one counselling sessions offer a private, structured space where you can gain clarity, emotional support and understand the",
+		price: 50000,
 	},
 ];
 
