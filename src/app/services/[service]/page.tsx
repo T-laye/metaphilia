@@ -7,6 +7,7 @@ import Button from "../../../components/ui/Button";
 import { useParams } from "next/navigation";
 import { serviceDetails } from "../../../lib/contents";
 import { pageRoutes } from "../../../lib/routes";
+import { formatCurrency } from "../../../utils/helper";
 
 interface ServiceProps {
 	img: string;
@@ -80,7 +81,7 @@ export default function Page() {
 						METAPHILIA
 					</h3>
 
-					<h2 className="text-2xl leading-10 font-bold mb-3.5 md:text-[32px] xl:text-[48px]">
+					<h2 className="text-2xl leading-10 font-bold mb-3.5 md:text-[32px] xl:text-[48px] md:leading-[100%]">
 						{service.title}
 					</h2>
 
@@ -94,7 +95,7 @@ export default function Page() {
 						</p>
 						<h5 className="mt-1.5">
 							<span className="text-[40px] lg:text-[48px] font-bold text-primary-500">
-								₦45,000
+								{formatCurrency(service.price)}
 							</span>
 							<span className="text-neutral-300 lg:text-xl">/session</span>
 						</h5>
