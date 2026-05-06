@@ -17,7 +17,7 @@ const variants = {
 	primary:
 		"bg-primary-500 text-neutral-100 hover:border-primary-600 hover:bg-primary-600 border-2 border-primary-500",
 	reverse:
-		"bg-neutral-100 text-primary-500 hover:border-primary-500 hover:bg-primary-600 border-2 border-neutral-100 hover:text-neutral-100",
+		"bg-neutral-100 text-primary-500 hover:border-primary-500 hover:bg-secondary-100 border-2 border-neutral-100",
 	secondary:
 		"bg-secondary-500 text-white border-2 border-secondary-500 hover:bg-secondary-600",
 	ghost:

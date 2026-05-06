@@ -4,8 +4,16 @@ import SubTitle from "../../components/SubTitle";
 import Button from "../../components/ui/Button";
 import { motion } from "framer-motion";
 import { serviceDetails } from "../../lib/contents";
+import { useRouter } from "next/navigation";
+import { pageRoutes } from "../../lib/routes";
 
 export default function Page() {
+	const router = useRouter();
+
+	const gotoService = (service: string) => {
+		router.push(pageRoutes.SERVICE(service));
+	};
+
 	return (
 		<div className="pt-20 lg:pt-24 min-h-[50vh]">
 			<SubTitle title="Our Services" breadcrumb="Services" />
@@ -30,6 +38,7 @@ export default function Page() {
 							hidden: { opacity: 0, y: 30 },
 							visible: { opacity: 1, y: 0 },
 						}}
+						onClick={() => gotoService(s.slug)}
 						transition={{ duration: 0.5, ease: "easeOut" }}
 						className="service-card relative max-[500px]:max-w-80 h-full place-self-center  rounded-[15px] overflow-hidden cursor-pointer hover:bg-primary-500 hover:text-neutral-100 duration-150"
 					>

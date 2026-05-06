@@ -4,6 +4,8 @@ import Image from "next/image";
 import { serviceDetails } from "../../../lib/contents";
 import { motion } from "framer-motion";
 import Button from "../../ui/Button";
+import { useRouter } from "next/navigation";
+import { pageRoutes } from "../../../lib/routes";
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -62,6 +64,12 @@ const Stats = () => {
 };
 
 const RenderServices = () => {
+	const router = useRouter();
+
+	const gotoService = (service: string) => {
+		router.push(pageRoutes.SERVICE(service));
+	};
+
 	return (
 		<section className="py-7.5 md:py-15 bg-primary-500">
 			<div className="custom-container text-neutral-100">
@@ -105,6 +113,7 @@ const RenderServices = () => {
 							}}
 							transition={{ duration: 0.5, ease: "easeOut" }}
 							className="service-card relative max-[500px]:max-w-80 h-full place-self-center  rounded-[15px] overflow-hidden cursor-pointer"
+							onClick={() => gotoService(s.slug)}
 						>
 							<div className="service-card-overlay absolute inset-0 bg-black/20 flex justify-center items-start">
 								<Button className="mt-[30%]">Read More</Button>
