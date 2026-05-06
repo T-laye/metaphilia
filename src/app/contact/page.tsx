@@ -11,6 +11,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
+import { LiaClock } from "react-icons/lia";
 
 const formSchema = z.object({
 	name: z.string().min(2, "Name is required"),
@@ -217,7 +218,7 @@ export default function Page() {
 								</Link>
 							</div>
 						</div>
-						{/* <div className="flex gap-3.5 mt-7.5">
+						<div className="flex gap-3.5 mt-7.5">
 							<div className="h-10 min-w-10 w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
 								<LiaClock className="text-3xl" />
 							</div>
@@ -231,7 +232,7 @@ export default function Page() {
 									available outside office hours by appointment)
 								</p>
 							</div>
-						</div> */}
+						</div>
 						<div className="flex gap-3.5 mt-7.5">
 							{/* <div className="h-10 min-w-10 w-10 bg-primary-500 text-neutral-100 flex items-center justify-center">
 								<LiaClock className="text-3xl md:text-[45px]" />
