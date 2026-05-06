@@ -92,7 +92,7 @@ export default function Page() {
 							<GiCheckMark className="text-primary-500 min-w-3.5 md:min-w-7.5 md:mt-2 text-2xl" />
 							<div className="">
 								{/* <span className="font-bold">{t.title}</span> */}
-								<p className="text-sm leading-6 text-center md:text-start sm:text-base md:text-lg lg:text-xl xl:text-2xl lg:leading-10">
+								<p className="text-sm leading-6 sm:text-base md:text-lg lg:text-xl xl:text-2xl lg:leading-10">
 									{t.text}
 								</p>
 							</div>
