@@ -1,3 +1,5 @@
+const WHATSAPP_NUMBER = "2347068899866";
+
 export const contactDetails = {
 	email: "info@metaphiliaconsult.com",
 	phone: "+234 706 889 9866",
@@ -6,6 +8,27 @@ export const contactDetails = {
 	linkedin: "",
 	youtube: "",
 	address: "KM 1, Eku/Osubi Express Way, Osubi, Delta State. Nigeria.",
+	whatsappLinks: {
+		bookSession: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+			"Hello, I would like to book a counselling session.",
+		)}`,
+
+		bookDiscoveryCall: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+			"Hello, I would like to book a discovery call to learn more about your services.",
+		)}`,
+	},
+	createBookingLink: ({ title, price }: { title: string; price: number }) => {
+		const message = `Hello, I would like to book a session.
+
+						Service: ${title}
+						Price: ₦${price.toLocaleString()}
+
+						Please share the next available time slot.`;
+
+		return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+			message,
+		)}`;
+	},
 };
 
 export const serviceDetails = [

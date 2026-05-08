@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Button from "./ui/Button";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { contactDetails } from "../lib/contents";
 
 const navLinks = [
 	{
@@ -188,7 +189,12 @@ const Header = () => {
 							))}
 						</motion.ul>
 						<div>
-							<Button>Book a Session</Button>
+							<Button
+								target="_blank"
+								href={contactDetails.whatsappLinks.bookSession}
+							>
+								Book a Session
+							</Button>
 						</div>
 					</nav>
 
@@ -293,7 +299,11 @@ const Header = () => {
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 0.3, duration: 0.3 }}
 							>
-								<Button className="w-full justify-center">
+								<Button
+									target="_blank"
+									href={contactDetails.whatsappLinks.bookSession}
+									className="w-full justify-center"
+								>
 									Book a Session
 								</Button>
 							</motion.div>

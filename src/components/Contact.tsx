@@ -54,7 +54,12 @@ export default function Contact() {
 							transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
 							className="mt-5.5 flex justify-center"
 						>
-							<Button>Book a Discovery Call</Button>
+							<Button
+								target="_blank"
+								href={contactDetails.whatsappLinks.bookDiscoveryCall}
+							>
+								Book a Discovery Call
+							</Button>
 						</motion.div>
 					</div>
 				</div>
@@ -143,7 +148,13 @@ export default function Contact() {
 						}}
 						transition={{ duration: 0.4 }}
 					>
-						<Button variant="reverse">Book a Session</Button>
+						<Button
+							variant="reverse"
+							target="_blank"
+							href={contactDetails.whatsappLinks.bookSession}
+						>
+							Book a Session
+						</Button>
 					</motion.div>
 				</motion.div>
 

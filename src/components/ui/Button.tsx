@@ -7,6 +7,7 @@ type ButtonProps = {
 	children: React.ReactNode;
 	href?: string;
 	className?: string;
+	target?: string;
 	variant?: "primary" | "secondary" | "ghost" | "reverse";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -27,6 +28,7 @@ const variants = {
 const Button = ({
 	children,
 	href,
+	target,
 	className = "",
 	variant = "primary",
 	...props
@@ -36,7 +38,7 @@ const Button = ({
 	// 🔥 If href exists → render Link
 	if (href) {
 		return (
-			<Link href={href} className={styles}>
+			<Link href={href} target={target} className={styles}>
 				{children}
 			</Link>
 		);

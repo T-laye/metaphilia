@@ -5,7 +5,7 @@ import Image from "next/image";
 import SubTitle from "../../../components/SubTitle";
 import Button from "../../../components/ui/Button";
 import { useParams } from "next/navigation";
-import { serviceDetails } from "../../../lib/contents";
+import { contactDetails, serviceDetails } from "../../../lib/contents";
 import { pageRoutes } from "../../../lib/routes";
 import { formatCurrency } from "../../../utils/helper";
 
@@ -102,8 +102,21 @@ export default function Page() {
 					</div>
 
 					<div className="flex flex-col gap-3.5 mt-5.5 sm:flex-row">
-						<Button>Book a Session</Button>
-						<Button variant="reverse" className="border border-primary-500">
+						<Button
+							target="_blank"
+							href={contactDetails.createBookingLink({
+								title: service.title,
+								price: service.price,
+							})}
+						>
+							Book a Session
+						</Button>
+						<Button
+							target="_blank"
+							href={contactDetails.whatsappLinks.bookDiscoveryCall}
+							variant="reverse"
+							className="border border-primary-500"
+						>
 							Book a Discovery Call
 						</Button>
 					</div>

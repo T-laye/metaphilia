@@ -4,12 +4,13 @@ import Button from "../../ui/Button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { pageRoutes } from "../../../lib/routes";
+import { contactDetails } from "../../../lib/contents";
 
 export default function Hero() {
 	return (
 		<div
 			style={{
-				backgroundImage:"url('/images/home/hero-bg.webp')",
+				backgroundImage: "url('/images/home/hero-bg.webp')",
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: "65% 100%",
@@ -89,8 +90,16 @@ export default function Hero() {
 						}}
 						className="flex flex-col items-center gap-3.75 min-[400px]:flex-row"
 					>
-						<Button>Book a Session</Button>
-						<Button variant="ghost" href={pageRoutes.SERVICES}>
+						<Button
+							target="_blank"
+							href={contactDetails.whatsappLinks.bookSession}
+						>
+							Book a Session
+						</Button>
+						<Button
+							variant="ghost"
+							href={pageRoutes.SERVICES}
+						>
 							Explore Services
 						</Button>
 					</motion.div>
