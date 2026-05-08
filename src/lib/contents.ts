@@ -20,10 +20,10 @@ export const contactDetails = {
 	createBookingLink: ({ title, price }: { title: string; price: number }) => {
 		const message = `Hello, I would like to book a session.
 
-						Service: ${title}
-						Price: ₦${price.toLocaleString()}
+Service: ${title}
+Price: ₦${price.toLocaleString()}
 
-						Please share the next available time slot.`;
+Please share the next available time slot.`;
 
 		return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
 			message,
