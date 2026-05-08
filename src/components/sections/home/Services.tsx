@@ -13,17 +13,17 @@ const Stats = () => {
 	const statsDetails = [
 		{
 			title: "Lives Supported",
-			value: "10+",
+			value: "20+",
 			img: "/icons/liveds.svg",
 		},
 		{
 			title: "Client Satisfaction Rate",
-			value: "15%",
+			value: "95%",
 			img: "/icons/handshake.svg",
 		},
 		{
 			title: "Certified COunsellors",
-			value: "0+",
+			value: "1+",
 			img: "/icons/mental-head.svg",
 		},
 	];
@@ -132,7 +132,7 @@ const RenderServices = () => {
 								<h5 className="my-3.5 text-xl sm:text-2xl xl:text-[28px] font-semibold">
 									{s.title}
 								</h5>
-								<p className="line-clamp-4 md:text-lg xl:text-xl">{s.desc}</p>
+								<p className="line-clamp-3 md:text-lg xl:text-xl">{s.desc}</p>
 							</div>
 						</motion.div>
 					))}

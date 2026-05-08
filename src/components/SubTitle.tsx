@@ -22,6 +22,7 @@ const SubTitle = ({
 						alt="green flower"
 						src="/images/flower-green.svg"
 						height={300}
+						loading="eager"
 						width={300}
 						className="h-full w-full object-contain"
 					/>

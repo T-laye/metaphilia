@@ -49,7 +49,7 @@ export default function Page() {
 							<Image
 								src={s.img}
 								alt={s.title}
-								className="w-full h-full object-cover"
+								className="w-full h-full object-cover service-image"
 								width={500}
 								loading="eager"
 								height={500}
@@ -59,7 +59,7 @@ export default function Page() {
 							<h5 className="mb-3.5 text-xl sm:text-2xl xl:text-[28px] font-semibold">
 								{s.title}
 							</h5>
-							<p className="line-clamp-4 md:text-lg xl:text-xl">{s.desc}</p>
+							<p className="line-clamp-3 md:text-lg xl:text-xl">{s.desc}</p>
 						</div>
 					</motion.div>
 				))}

@@ -149,7 +149,7 @@ export default function Contact() {
 
 				{/* IMAGES GRID */}
 				<motion.div
-					className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6"
+					className="grid grid-cols1 grid-cols-2 md:grid-cols-3 xl:grid-cols-6"
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true }}
@@ -165,7 +165,7 @@ export default function Contact() {
 					{[1, 2, 3, 4, 5, 6].map((i) => (
 						<motion.div
 							key={i}
-							className="w-full h-81.25"
+							className="w-full sm:h-81.25"
 							variants={{
 								hidden: { opacity: 0, scale: 0.95 },
 								visible: { opacity: 1, scale: 1 },
