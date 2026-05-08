@@ -33,15 +33,15 @@ export default function Footer() {
 						</p>
 					</div>
 
-					<div className="flex gap-12 sm:gap-20 lg:gap-20 xl:gap-24 max-[315px]:flex-col max-[315px]:gap-8">
+					<div className="flex gap-12 sm:gap-20 lg:gap20 xl:gap24 max-[315px]:flex-col max-[315px]:gap-8">
 						{/* Services */}
 						<div className="md:order-2">
 							<h4 className="font-bold">Our Services</h4>
-							<div className="flex flex-col mt-5 gap-5 md:mt-1 md:gap-0">
+							<div className="flex flex-col mt-5 gap-5 md:mt-1 md:gap-2">
 								{serviceDetails.map((s) => (
 									<Link
 										key={s.slug}
-										className="whitespace-nowrap hover:text-primary-500 hover:font-semibold duration-150"
+										className="whitespacenowrap hover:text-primary-500 hover:font-semibold duration-150"
 										href={pageRoutes.SERVICE(s.slug)}
 									>
 										{s.title}
