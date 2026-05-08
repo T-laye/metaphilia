@@ -162,7 +162,7 @@ export default function Contact() {
 						},
 					}}
 				>
-					{[1, 2, 3, 4, 5, 6].map((i) => (
+					{[1, 2, 6, 4, 5, 3].map((i) => (
 						<motion.div
 							key={i}
 							className="w-full sm:h-81.25"

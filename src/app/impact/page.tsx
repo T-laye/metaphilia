@@ -33,10 +33,10 @@ export default function Page() {
 					className="h-51.5 sm:h-70 w-full md:h-90 lg:h-110 xl:h-120 rounded-[10px] lg:rounded-[16.8px] overflow-hidden"
 				>
 					<Image
-						src="/images/about/about-img.png"
-						alt="About Image"
+						src="/images/impact/impact-img.webp"
+						alt="Impact Image"
 						loading="eager"
-						height={1000}
+						height={500}
 						width={500}
 						className="w-full h-full object-cover"
 					/>
