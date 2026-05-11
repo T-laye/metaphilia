@@ -23,7 +23,7 @@ const Stats = () => {
 		},
 		{
 			title: "Certified COunsellors",
-			value: "1+",
+			value: "5+",
 			img: "/icons/mental-head.svg",
 		},
 	];
